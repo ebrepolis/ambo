@@ -2,386 +2,336 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>الجمعية الخيرية الاسلامية وجدة</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e" crossorigin="anonymous" />
-<link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>الجمعية الخيرية الاسلامية وجدة - مؤسسة الرعاية الاجتماعية منذ 1928</title>
+  
+  <meta name="description" content="الجمعية الخيرية الاسلامية وجدة - مؤسسة رعاية اجتماعية تأسست عام 1928، تقدم خدمات الرعاية للأطفال والمسنين والمحتاجين في مدينة وجدة، المغرب">
+  <meta name="keywords" content="جمعية خيرية، وجدة، المغرب، رعاية اجتماعية، أيتام، مسنين، خيرية اسلامية، وجدة، المغرب،orphelinat oujda،orphelinat maroc،">
+  <meta name="author" content="الجمعية الخيرية الاسلامية وجدة">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#00695c">
+  
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="manifest" href="manifest.json">
 
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: tajawal, sans-serif;
-     
-    }
-
-    .page-container {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    main {
-      flex: 1;
-    }
-
-    header {
-      background-color: #00695c;
-      color: white;
-      text-align: center;
-      padding: 15px 0;
-    }
-
-    nav {
-      background-color: #004d40;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li {
-      margin: 5px 10px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      display: block;
-    }
-
-    nav ul li a:hover {
-      background-color: #00796b;
-    }
-
-    .logo img {
-      width: 120px;
-      margin: 15px auto;
-      display: block;
-    }
-
-    .section {
-      padding: 30px;
-      max-width: 900px;
-      margin: 30px auto;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      display: none;
-      position: relative;
-    }
-
-    .section.active {
-      display: block;
-    }
-
-    .section h2 {
-      color: #00695c;
-      margin-bottom: 20px;
-    }
-
-    .section ul {
-      padding-right: 20px;
-    }
-
-    .section li {
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
-
-    footer {
-      width: 100%;
-      background-color: #004d40;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-
-    .back-btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 10px 18px;
-      background-color: #00695c;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-      text-align: center;
-      text-decoration: none;
-    }
-
-    .back-btn:hover {
-      background-color: #004d40;
-    }
-   
-
-#historique {
-  font-family: 'tajawal', 'Arial', sans-serif;
-  background: linear-gradient(to bottom, #fdfdfd, #f1f1f1);
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  padding: 40px;
-  margin: 30px auto;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  direction: rtl;
-  line-height: 2.1;
-  color: #2e2e2e;
-}
-
-#historique h2 {
-  font-size: 32px;
-  color: #00695c;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #00796b;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-#historique p {
-  font-size: 18px;
-  text-align: justify;
-  white-space: pre-line;
-}
-.gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Larger cards */
-      gap: var(--gap);
-      margin-top: var(--gap);
-    }
-    /* Chaque carte garde EXACTEMENT la même hauteur grâce au ratio 1:1 */
-    .card {
-      position: relative;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      border-radius: var(--border-radius);
-      background: #111827;
-      box-shadow: var(--card-shadow);
-      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    }
-    .card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 16px 35px rgba(0,0,0,.2);
-    }
-     .card img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      filter: brightness(0.8); /* Slightly dim images for better text contrast */
-      transition: transform .4s ease-in-out, filter .4s ease-in-out;
-    }
-     .card:hover img {
-      transform: scale(1.08);
-      filter: brightness(1);
-    }
-    /* Optionnel : étiquette */
-     .label {
-      position: absolute;
-      bottom: var(--gap)/2;
-      right: var(--gap)/2;
-      padding: 0.5rem 1rem;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(8px);
-      border-radius: 999px;
-      color: white;
-      font-size: 1em;
-      font-weight: 700;
-      z-index: 10;
-    }
-  </style>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preload" href="logo.png" as="image">
+  <link rel="preload" href="khiria.jpg" as="image">
 </head>
 <body>
-  
-  <div class="page-container">
-    <div class="logo">
-      <img src="logo ok.png" alt="شعار الجمعية" />
-    </div>
 
-    <header>
-      <h1>الجمعية الخيرية الاسلامية وجدة<BR>مؤسسة الرعاية الاجتماعية<BR>ETABLISSEMENT DE PROTECTION SOCIALE OUJDA</h1>
-      <nav>
-        <ul>
-          <li><a onclick="showSection('accueil')">الرئيسية</a></li>
-          <li><a onclick="showSection('nous')">من نحن؟</a></li>
-          <li><a onclick="showSection('historique')">تاريخ الجمعية</a></li>
-          <li><a onclick="showSection('buts')">أهداف الجمعية</a></li>
-          <li><a onclick="showSection('etablissements')">مؤسسات الجمعية</a></li>
-          <li><a onclick="showSection('membres')">أعضاء الجمعية</a></li>
-          <li><a onclick="showSection('projets')">مشاريع الجمعية</a></li>
-          <li><a onclick="showSection('activites')">الأنشطة</a></li>
-          <li><a onclick="showSection('contact')">إتصل بنا</a></li>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#accueil" class="brand" aria-label="العودة إلى الصفحة الرئيسية">
+        <img src="logo.png" alt="شعار الجمعية الخيرية الإسلامية وجدة" class="logo" width="60" height="60">
+        <div class="brand-text">
+          <div class="arabic-title"> مؤسسة الرعاية الاجتماعية دار الاطفال</div>
+          <div class="sub-title">Etablissement de Protection Social DAR Al-ATFAL</div>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="القائمة الرئيسية">
+        <ul role="menubar">
+          <li role="none"><a href="#accueil" class="nav-link active" role="menuitem" aria-current="page">الرئيسية</a></li>
+          <li role="none"><a href="#nous" class="nav-link" role="menuitem">من نحن؟</a></li>
+          <li role="none"><a href="#historique" class="nav-link" role="menuitem">تاريخنا</a></li>
+          <li role="none"><a href="#etablissements" class="nav-link" role="menuitem">مؤسساتنا</a></li>
+          <li role="none"><a href="#membres" class="nav-link" role="menuitem">أعضاء الجمعية</a></li>
+          <li role="none"><a href="#buts" class="nav-link" role="menuitem">أهداف الجمعية</a></li>
+          <li role="none"><a href="#partenaires" class="nav-link" role="menuitem">الشركاء والداعمون</a></li>
+          <li role="none"><a href="#activites" class="nav-link" role="menuitem">الأنشطة</a></li>
+          <li role="none"><a href="#galerie" class="nav-link" role="menuitem">معرض الصور</a></li>
+          <li role="none"><a href="#contact" class="nav-link" role="menuitem">اتصل بنا</a></li>
         </ul>
       </nav>
-    </header>
 
-    <main>
-      <section id="accueil" class="section active">
-        <h2>مرحبا بكم في الجمعية الخيرية الاسلامية وجدة</h2>
-      
-      </section>
-      <section id="nous" class="section ">
-        <p>نحن جمعية غير ربحية تهدف إلى تعزيز التنمية المجتمعية والمساهمة في تحسين ظروف الحياة للفئات المستهدفة.</p>
-        <a class="back-btn" onclick="showSection('accueil')">عودة للرئيسية</a>
-      </section>
-      <section id="historique" class="section">
-        <h2>تاريخ الجمعية</h2>
-        <p>تأسست الجمعية الخيرية الإسلامية في سنة 1928 على يد المرحومين السيد إدريس احساين والسيد علي بن رحال، حيث كان مقرها الأول بدار الشيخ علي الموجودة بحي أحراش، بالمدينة القديمة، وكان عدد النزلاء آنذاك 10 مستفيدين، ثم انتقلت في سنة 1932 إلى قيسارية الحبوس على يمين ضريح سيدي عبد الوهاب. حيث كانت تأوي ما يزيد على 40 نزيلا. ولما تضاعف عدد النزلاء في سنة 1934 انتقلت إلى طريق بوقنادل حيث تم تفويت قطعة أرضية على مساحة 7900 م2 من طرف المجلس البلدي لوجدة ثم تم توسيعها من خلال تفويت ثلاث قطع أرضية بمساحة 11400 م 2 من طرف ناظر وزارة الأوقاف والشؤون الإسلامية بوجدة بتاريخ 1938. ليرتفع عدد المستفيدين إلى ما يفوق 400 نزيل. و قد كانت محط اهتمام من طرف مجموعة من الشخصيات الوطنية والأجنبية، كان أهمها زيارة المغفور له محمد الخامس طيب الله ثراه في 24 يونيو 1943 ، وقد قدم جلالته هبة مالية ملكية للجمعية الخيرية  أثناء زيارته للمدينة سنة 1956 وقد عرف مقر الجمعية زيارة صاحبة السمو الملكي الأميرة للامليكة ، وكذلك للاعاشة ومجموعة من الشخصيات المهمة من بينهم السيد عبد الهادي بوطالب والسيدة لاكوست زوجة المقيم العام الفرنسي آنذاك ومن أبرز المحطات التاريخية الكبرى، زيارة جلالة الملك محمد السادس نصره الله لدار المسنين في 21 دجنبر 1999، وتقديمه لهبة مالية ملكية جريا على سنة جده محمد الخامس للجمعية الخيرية الإسلامية أثناء زيارته لمدينة وجدة من 10إلى 18 مارس 2003.وبتاريخ 09 شتنبر 2008 تم تدشين المركب الاجتماعي "النجد" دار الاطفال. على مساحة 8000 م2، ودار الفتاة بحي الحكمة على مساحـــة 3160 م2 منها 2400 م2 مبنية في 07 شتنبر 2008. وفي 15 شتنبر 2009 تم تدشين توسعتها. كما وضع جلالته الحجر الأساس لبناء المركب التجاري بالمؤسسة القديمة بطريق بوقنادل  ..     .
- إن أهم ما يميز الجمعية الخيرية الإسلامية هو محافظتها على جموعها العامة بصفة منتظمة، وكلما اقتضت الضرورة ذلك، ليصل عدد المكاتب الإدارية الذين تعاقبوا على تسييرها منذ سنة 1928 إلى سنة 2009 إلى 24 مكتب، وتداول على رئاستها 15 رئيسا ابتداء من السيد علي بن رحال سنة 1928 الى السيد إدريس هوار سنة 2009. وجميع هذه الجموع والمكاتب موثق لها ومحتفظ بملفاتها لدى إدارة الجمعية الخيرية
-</p>
-        <a class="back-btn" onclick="showSection('accueil')">عودة للرئيسية</a>
-      </section>
+      <div class="header-controls">
+        <button id="theme-toggle" aria-label="تبديل الوضع الليلي" class="theme-toggle" title="تبديل الوضع الليلي">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+          <span class="sr-only">تبديل الوضع الليلي</span>
+        </button>
+        <button id="nav-toggle" aria-label="فتح القائمة" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+          <span class="sr-only">فتح القائمة</span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-      <section id="buts" class="section">
-        <h2>أهداف الجمعية</h2>
-        <ul>
-         <p>تهدف الجمعية منذ تأسيسها إلى تحقيق مجموعة من الأهداف منها على الخصوص:
-* التكفل باليتامى والمهملين والعمل على إدماجهم في الحياة الاجتماعية حتى مرحلة الاستقلال الشخصي (إيواء وتغذية ولباس وعلاج وتدريس الخ ....)
-* توفير جميع مستلزمات الحيـــاة العاديـة.
-* تطوير العمل الخيري بمختلف أشكاله مستندا في ذلك إلى الأصول الفكرية المستمدة من الشريعة الإسلامية السمحاء والحضارة المغربية والتراث الإنساني.
-* تطوير آليات العمل والتفكير العقلاني المنظم للنهوض بأوضاع الطفولة اليتيمة، التي رمت بها الظروف داخل هذه المؤسسة الاجتماعية التي كانت ولازالت بعون الله وسخاء المحسنين وتضافر جهود جميع الفعاليات، تواصل رسالتها النبيلة تحت القيادة الرشيدة للرائد الأول للعمل الاجتماعي والأب الحنون للمؤسسات الخيرية ونزلائها جلالة الملك محمد السادس أيده الله ونصره، والله لا يضيع اجر من أحسن عملا </ul>
-        <a class="back-btn" onclick="showSection('accueil')">عودة للرئيسية</a>
-      </section>
-
-            <section id="etablissements" class="section">
-        <h2>مؤسسات الجمعية</h2>
-        <p>تشرف الجمعية على عدة مؤسسات خيرية تهدف إلى رعاية الفئات المستهدفة منها: دار الأطفال، دار الفتاة، دار الطالبة، دار المسنين، دار التضامن.</p>
-        <main class="gallery">
-            <div class="card">
-                <img src="khiria.jpg" alt="دار الاطفال" loading="lazy">
-                <span class="label">دار الاطفال</span>
-            </div>
-            <div class="card">
-                <img src="scratch1.jpg" alt="دارالفتاة" loading="lazy">
-                <span class="label">دار الفتاة</span>
-            </div>
-            <div class="card">
-                <img src="dare moussinine.jpg" alt="دار العجزة" loading="lazy">
-                <span class="label">دار المسنين</span>
-            </div>
-            <div class="card">
-                <img src="scratch2.JPG" alt="دار التضامن" loading="lazy">
-                <span class="label">دار التضامن</span>
-            </div>
-            <div class="card">
-                <img src="dar taliba amal.jpg" alt="دار الطالبة" loading="lazy">
-                <span class="label">دار الطالبة</span>
-            </div>
-        </main>
-        <a class="back-btn" onclick="showSection('accueil')">عودة للرئيسية <i class="fas fa-arrow-right"></i></a>
-      </section>
-
-</body>
+  <main>
+    <section id="accueil" class="hero" role="banner" aria-label="الصفحة الرئيسية">
+      <div class="slideshow-container" role="img" aria-label="صور المؤسسات التابعة للجمعية">
         
-      <section id="membres" class="section">
-        <h2>أعضاء الجمعية</h2>
-        <p>تتكون الجمعية من مجموعة من المتطوعين والمهنيين الذين يكرسون جهودهم لخدمة المجتمع ودعم الفئات المحتاجة.</p>
-        <a class="back-btn" onclick="showSection('accueil')">عودة للرئيسية</a>
-      </section>
+        
+        <div class="slide" data-bg="maison enfant.jpg" aria-hidden="true"></div>
+        <div class="slide" data-bg="1934.png" aria-hidden="true"></div>
+        <div class="slide" data-bg="fondateurs.png" aria-hidden="true"></div>
+        
+       
+      </div>
 
-      <section id="projets" class="section">
-        <h2>مشاريع الجمعية</h2>
-        <p>تنفذ الجمعية مشاريع متنوعة تشمل تحسين البنية التحتية للمؤسسات، دعم التعليم، والرعاية الصحية للأطفال والمسنين.</p>
-        <a class="back-btn" onclick="showSection('accueil')">عودة للرئيسية</a>
-      </section>
+      <button class="prev" aria-label="الصورة السابقة" type="button">
+        <span aria-hidden="true">❯</span>
+      </button>
+      <button class="next" aria-label="الصورة التالية" type="button">
+        <span aria-hidden="true">❮</span>
+      </button>
 
-      <section id="activites" class="section">
-        <h2>الأنشطة</h2><p>مؤسسات الرعاية الاجتماعية للأطفال تقدم مجموعة متنوعة من الأنشطة التي تهدف إلى الدعم النفسي، التربوي، الاجتماعي والترفيهي، ومن أبرزها:
-
-الأنشطة التربوية والتعليمية
-
-دروس الدعم المدرسي.
-
-دروس محو الأمية للأطفال المتأخرين دراسيًا.
-
-أنشطة تنمية المهارات اللغوية والرياضية.
-
-الأنشطة الاجتماعية والتربوية
-
-حملات توعية حول النظافة، الصحة، حقوق الطفل.
-
-ورش التربية على المواطنة والسلوك المدني.
-
-أنشطة تهدف إلى تنمية قيم التضامن والتعاون.
-
-الأنشطة الثقافية
-
-تنظيم ورش في المسرح والموسيقى والرسم.
-
-مسابقات ثقافية وفكرية.
-
-رحلات لزيارة المتاحف والمعالم التاريخية.
-
-الأنشطة الترفيهية والرياضية
-
-ألعاب جماعية داخلية وخارجية.
-
-مخيمات صيفية ورحلات ترفيهية.
-
-أنشطة رياضية (كرة القدم، السباحة، ألعاب الكترونية...).
-
-الأنشطة النفسية والداعمة
-
-جلسات دعم نفسي واجتماعي للأطفال في وضعية صعبة.
-
-ورش تطوير الذات والثقة بالنفس.
-
-مجموعات للنقاش الحر والتعبير عن المشاعر.</p>
-      
-        <a class="back-btn" onclick="showSection('accueil')">عودة للرئيسية</a>
-      </section>
-       <section id="subvension" class="section">
-        <h2>الشركاء والداعمون</h2>
-        <p>التعاون الوطني.المبادرة الوطنية للتنمية البشرية.</p>
-         <a class="back-btn" onclick="showSection('accueil')">عودة للرئيسية</a>
-      </section>
-      <section id="contact" class="section">
-        <h2>إتصل بنا</h2>
-        <p>للتواصل مع الجمعية، لا تترددوا في الاتصال بنا عبر المعلومات التالية، أو زيارتنا في مقرنا:</p>
-        <ul>
-          <li><i class="fas fa-phone-alt"></i> الهاتف: 0536521122</li>
-          <li><i class="fas fa-envelope"></i> البريد الإلكتروني: sbm.oujda@gmail.com</li>
-          <li><i class="fas fa-map-marker-alt"></i> العنوان: شارع النيل, المركب الاجتماعي النجد. وجدة، المغرب</li>
-        </ul>
-        <p>نحن هنا للاستماع إليكم والإجابة على استفساراتكم وملاحظاتكم. دعمكم يهمنا!</p>
-        <div style="margin-top: 30px;">
-            <iframe src="https://www.google.com/maps/place/ORPHELINAT(Association+Musulmane+de+Bienfaisance)/@34.6614318,-1.8764007,17z/data=!3m1!4b1!4m6!3m5!1s0xd787cd76be201d7:0x8baced52c22dad09!8m2!3d34.6614274!4d-1.8738258!16s%2Fg%2F12hnn31nz?hl=en&entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <div class="overlay" aria-hidden="true"></div>
+      <div class="hero-inner container" data-aos="fade-up">
+        <h1>الجمعية الخيرية الاسلامية وجدة</h1>
+        <h2 class="hero-subtitle">Association Musulmane de Bienfaisance Oujda</h2>
+        <p class="lead">عطاء يمتد لأكثر de 95 عاماً في خدمة المجتمع</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#nous" aria-label="اكتشف المزيد عن الجمعية">اكتشف المزيد</a>
+          <a class="btn btn-secondary" href="#contact" aria-label="تواصل معنا">اتصل بنا</a>
         </div>
-        <a class="back-btn" onclick="showSection('accueil')">عودة للرئيسية <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+    <section class="stats-section" data-aos="fade-up" aria-labelledby="stats-heading">
+      <div class="container">
+        <h2 id="stats-heading" class="sr-only">إحصائيات الجمعية</h2>
+        <div class="stats-grid" role="region" aria-label="إحصائيات الجمعية">
+          <article class="stat-item">
+            <div class="stat-icon" aria-hidden="true"><i class="fas fa-calendar-alt"></i></div>
+            <div class="stat-number" data-target="97" aria-label="97">0</div>
+            <div class="stat-label">سنة من العطاء</div>
+          </article>
+          <article class="stat-item">
+            <div class="stat-icon" aria-hidden="true"><i class="fas fa-users"></i></div>
+            <div class="stat-number" data-target="750" aria-label="أكثر de 750">0</div>
+            <div class="stat-label">مستفيد سنوياً</div>
+          </article>
+          <article class="stat-item">
+            <div class="stat-icon" aria-hidden="true"><i class="fas fa-building"></i></div>
+            <div class="stat-number" data-target="5" aria-label="5">0</div>
+            <div class="stat-label">مؤسسات رعاية اجتماعية</div>
+          </article>
+          <article class="stat-item">
+            <div class="stat-icon" aria-hidden="true"><i class="fas fa-hands-helping"></i></div>
+            <div class="stat-number" data-target="24" aria-label="24">0</div>
+            <div class="stat-label">مكتب إداري</div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      </section>
-    </main>
+    <section id="nous" class="section" data-aos="fade-up" aria-labelledby="about-heading">
+      <div class="container text-center">
+        <h2 id="about-heading">من نحن؟</h2>
+        <div class="section-lead">
+          <p>نحن جمعية غير ربحية تأسست عام 1928، نهدف إلى تعزيز التنمية المجتمعية والمساهمة في تحسين ظروف الحياة للفئات الهشة. نسعى لتوفير الرعاية والتأطير والتكوين للمستفيدين والعمل على إدماجهم اجتماعياً واقتصادياً.</p>
+          <p>جمعية ذات منفعة عامة بمقتضى مرسوم: رقم 2.12.133 صادر في 29 من ربيع الآخر (22 مارس 2012).</p>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-      <p>جميع الحقوق محفوظة © الجمعية الخيرية الاسلامية وجدة</p>
-    </footer>
+    <section id="historique" class="section alt" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-center">تاريخ الجمعية</h2>
+        <div class="history-content">
+          <p>تأسست الجمعية الخيرية الإسلامية في سنة 1928 على يد المرحومين السيد إدريس احساين والسيد علي بن رحال، حيث كان مقرها الأول بدار الشيخ علي الموجودة بحي أحراش بالمدينة القديمة، وكان عدد النزلاء آنذاك 10 مستفيدين فقط.</p>
+          <p>انتقلت الجمعية في سنة 1932 إلى قيسارية الحبوس، لتأوي ما يزيد على 40 نزيلا. ومع تضاعف العدد، انتقلت في سنة 1934 إلى طريق بوقنادل بعد تفويت قطعة أرضية من طرف المجلس البلدي، وتم توسيعها لاحقاً بهبات من وزارة الأوقاف، ليرتفع عدد المستفيدين إلى ما يفوق 400 نزيل.</p>
+          <p>حظيت الجمعية باهتمام بالغ من شخصيات وطنية، أبرزها زيارة المغفور له محمد الخامس طيب الله ثراه في 24 يونيو 1943، والذي قدم هبة مالية ملكية للجمعية سنة 1956. كما شهدت الجمعية زيارة جلالة الملك محمد السادس نصره الله لدار المسنين في 21 دجنبر 1999، وتقديمه لهبة ملكية كريمة سنة 2003.</p>
+          <p>إن أهم ما يميز الجمعية الخيرية الإسلامية هو محافظتها على جموعها العامة بصفة منتظمة، ليصل عدد المكاتب الإدارية الذين تعاقبوا على تسييرها منذ سنة 1928 إلى 24 مكتب، وتداول على رئاستها 15 رئيساً، وجميع هذه المراحل موثقة ومحفوظة لدى إدارة الجمعية.</p>
+        </div>
+      </div>
+    </section>
+    <section id="etablissements" class="section" data-aos="fade-up">
+  <div class="container">
+    <h2 class="text-center">الإدارة المركزية للجمعية والمؤسسات التابعة لها</h2>
+    <p class="text-center section-lead">
+      تشرف الجمعية على عدة مؤسسات خيرية تهدف إلى رعاية الفئات المستهدفة.
+    </p>
+
+    <div class="gallery">
+      <div class="card" data-aos="zoom-in" data-aos-delay="0">
+        <img src="images/ambo.jpg" alt="دار الأطفال" loading="lazy" width="280" height="250">
+        <span class="label">دار الأطفال</span>
+      </div>
+
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/maison_de_fille.jpg" alt="دار الفتاة" loading="lazy" width="280" height="250">
+        <span class="label">دار الفتاة</span>
+      </div>
+
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="images/ajaza.jpg" alt="دار المسنين" loading="lazy" width="280" height="250">
+        <span class="label">رياض المسنين</span>
+      </div>
+
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="images/dar_attadamoune.jpeg" alt="دار التضامن" loading="lazy" width="280" height="250">
+        <span class="label">دار التضامن</span>
+      </div>
+
+      <div class="card" data-aos="zoom-in" data-aos-delay="400">
+        <img src="images/dar_taliba_amal.jpg" alt="دار الطالبة أمل" loading="lazy" width="280" height="250">
+        <span class="label">دار الطالبة الأمل</span>
+      </div>
+    </div>
   </div>
+</section>
 
-  <script>
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(sec => sec.classList.remove('active'));
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.classList.add('active');
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  </script>
+
+   <section class="section" id="membres">
+    <div class="membres">
+        <h2>أعضاء الجمعية</h2>
+        <p>
+            تتكون الجمعية من مجموعة من الأساتذة والمهنيين والمحسنين الذين يكرسون جهودهم لخدمة المجتمع ودعم الفئات المحتاجة.
+        </p>
+        
+        <img src="images/membres.png" alt="Membres de l'association" loading="lazy">
+    </div>
+</section>
+    <section class="section" data-aos="fade-up" id="buts">
+<div class="container">
+<h2>أهداف الجمعية</h2>
+<ul>
+<li>التكفل باليتامى والمهملين والعمل على إدماجهم في الحياة الاجتماعية حتى مرحلة الاستقلال الشخصي (إيواء وتغذية ولباس وعلاج وتدريس...)</li>
+<li>توفير جميع مستلزمات الحياة العادية.</li>
+<li>توفير مأوى آمن وكريم للمسنين. يوفر لهم الإيواء، الطعام، والرعاية الطبية، ويعمل على حفظ كرامتهم الإنسانية. كما أن هذا المشروع تم إنجازه بدعم من المبادرة الوطنية للتنمية البشرية.</li>
+<li>محاربة الهدر المدرسي في  القرى والبوادي خصوصا لفئة الاناث التي تعاني من التهميش والحرمان من التعليم نظرا لصعوبة التنقل الى المدارس وانعدام وسائل المواصلات </li>
+<li>رعاية المختلين عقليًا: تساهم الجمعية في رعاية المختلين عقليًا، وتوفير المأوى لهم في مركز التضامن الذي تشرف عليه الجمعية، وتقديم الرعاية اللازمةلهم.</li>
+<li>تطوير العمل الخيري بمختلف أشكاله مستندا إلى الأصول الفكرية من الشريعة الإسلامية والحضارة المغربية.</li>
+<li>تطوير آليات العمل والنهوض بأوضاع الطفولة اليتيمة.</li>
+</ul>
+</div>
+</section>
+<section id="activites" class="section" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-center">أنشطتنا الرئيسية</h2>
+        <p class="text-center section-lead">نقدم مجموعة متنوعة من الأنشطة التي تهدف إلى الدعم النفسي، التربوي، الاجتماعي والترفيهي.</p>
+        <div class="activities-grid">
+          <div class="activity-card" data-aos="fade-up" data-aos-delay="100"><div class="activity-icon"><i class="fas fa-graduation-cap"></i></div><h3>الدعم المدرسي</h3><p>دروس الدعم وأنشطة تطوير المهارات التعليمية.</p></div>
+          <div class="activity-card" data-aos="fade-up" data-aos-delay="200"><div class="activity-icon"><i class="fas fa-heart-pulse"></i></div><h3>الدعم النفسي والاجتماعي</h3><p>جلسات دعم نفسي وتطوير الذات للأطفال والمراهقين.</p></div>
+          <div class="activity-card" data-aos="fade-up" data-aos-delay="300"><div class="activity-icon"><i class="fas fa-palette"></i></div><h3>الأنشطة الثقافية والرياضية</h3><p>ورشات فنية، رحلات ثقافية ومسابقات رياضية متنوعة.</p></div>
+          <div class="activity-card" data-aos="fade-up" data-aos-delay="400"><div class="activity-icon"><i class="fas fa-users-cog"></i></div><h3>الورش التكوينية</h3><p>حملات توعية وورش تربوية لتنمية المهارات الحياتية.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="galerie">
+    <div class="galerie">
+        <h2>معرض الصور عبر العقود</h2>
+        <p>
+           اهم الاحداث والزيارات عبر التاريخ التي مرت بها الجمعية منذ التاسيس الى يومنا الحالي
+        </p>
+        
+        <img src="images/gallerie photos/1.JPG" alt="galerie" loading="lazy">
+        <img src="images/gallerie photos/2.JPG" alt="galerie" loading="lazy">
+        <img src="images/gallerie photos/3.JPG" alt="galerie" loading="lazy">
+        <img src="images/gallerie photos/4.JPG" alt="galerie" loading="lazy">
+        <img src="images/gallerie photos/5.JPG" alt="galerie" loading="lazy">
+        <img src="images/gallerie photos/6.JPG" alt="galerie" loading="lazy">
+        <img src="images/gallerie photos/7.JPG" alt="galerie" loading="lazy">
+        <img src="images/gallerie photos/8.JPG" alt="galerie" loading="lazy">
+
+    </div>
+</section>
+    <section class="section testimonials-section" data-aos="fade-up">
+<div class="container">
+<h2>كلمات من القلب</h2>
+<div class="testimonials-slider">
+<div class="testimonial-card active">
+<div class="testimonial-content">
+<p>"الجمعية الخيرية الإسلامية كانت بيتي الثاني، حيث وجدت الحب والرعاية التي أحتاجها"</p>
+<div class="testimonial-author">
+<strong>سارة محمد</strong>
+<span>خريجة دار الفتاة</span>
+</div>
+</div>
+</div>
+<div class="testimonial-card">
+<div class="testimonial-content">
+<p>"أشكر الله على وجود هذه المؤسسة التي تهتم بنا نحن المسنين وتوفر لنا الرعاية الكاملة"</p>
+<div class="testimonial-author">
+<strong>الحاج أحمد</strong>
+<span>مقيم في دار المسنين</span>
+</div>
+</div>
+</div>
+<div class="testimonial-card">
+<div class="testimonial-content">
+<p>"بفضل الدعم المدرسي في الجمعية، تمكنت من النجاح في دراستي وتحقيق أحلامي"</p>
+<div class="testimonial-author">
+<strong>يوسف العمراني</strong>
+<span>طالب في دار الأطفال</span>
+</div>
+</div>
+</div>
+</div>
+<div class="testimonial-controls">
+<button class="testimonial-btn active" data-slide="0"></button>
+<button class="testimonial-btn" data-slide="1"></button>
+<button class="testimonial-btn" data-slide="2"></button>
+</div>
+</div>
+</section>
+    
+   <section class="section alt" data-aos="fade-up" id="partenaires">
+<div class="container">
+<h2>الشركاء والداعمون</h2>
+<p>  التعاون الوطني، مؤسسة محمد الخامس للتضامن، المبادرة الوطنية للتنمية البشرية،مجلس الجهة و المجلس البلدي ومجموعة من المحسنين المحليين ومن خارج الوطن.
+    </p>
+<div class="partenaires-logos">
+<img alt="شركاء الجمعية" class="responsive-image" src="images/entraide_nationale.png" width="150"/>
+<img alt="مؤسسة محمد الخامس للتضامن" class="responsive-image" src="images/tadamone.jpg" width="150"/>
+<img alt="المبادرة الوطنية للتنمية البشرية" class="responsive-image" src="images/indh.jpeg" width="150"/>
+<img alt="مجلس الجهة "class="responsive-image" src="images/conseil de la région.png" width="150">
+<img alt="المجلس البلدي لوجدة" class="responsive-image" src="images/mairie.jpeg" width="150"/>
+</div>
+</div>
+</section>
+<section class="section contact-section" data-aos="fade-up" id="contact">
+<div class="container">
+<h2>إتصل بنا</h2>
+<ul class="contact-info">
+<li><i class="fas fa-phone-alt"></i> الهاتف: 0536521122</li>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: sbm.oujda@gmail.com</li>
+<li><i class="fas fa-map-marker-alt"></i> العنوان: شارع النيل, المركب الاجتماعي النجد. وجدة، المغرب</li>
+<li><i class="fas fa-university"></i> <a href="images/attestation de rib.pdf">رقم الحساب البنكي:157570212145798551000901</a></li>
+</ul>
+<div class="map-wrapper">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.7335364891246!2d-1.8764007236897224!3d34.661431785317944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd787cd70aafc1d9%3A0xf07fcb6176c599cc!2sM46G%2BMMV%2C%20Bd%20du%20Nil%2C%20Oujda!5e0!3m2!1sen!2sma!4v1757191163113!5m2!1sen!2sma"></iframe>
+</div>
+<p class="small">نحن هنا للاستماع إليكم والإجابة على استفساراتكم وملاحظاتكم. دعمكم يهمنا!</p>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<p>جميع الحقوق محفوظة © الجمعية الخيرية الاسلامية وجدة</p>
+<p>تصميم وتطوير <a href="https://www.linkedin.com/in/mostafa-errachidi/" style="color: #ffffff; text-decoration: underline;" target="_blank">مصطفى الراشيدي</a></p>
+</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('SW registered: ', registration);
+        })
+        .catch(registrationError => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    });
+  }
+</script>
 </body>
 </html>
